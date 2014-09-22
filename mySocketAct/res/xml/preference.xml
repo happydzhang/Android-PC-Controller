@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:key="setting" android:title="基本配置">
+        <CheckBoxPreference android:title="单击" android:key="apply_singletap" android:defaultValue="true"></CheckBoxPreference>
+        <CheckBoxPreference android:key="apply_doubletap" android:title="双击"></CheckBoxPreference>
+        <CheckBoxPreference android:key="apply_righttap" android:title="右键" android:summary="双指点击表示右键"></CheckBoxPreference>
+        <CheckBoxPreference android:key="apply_keyboard" android:title="键盘功能" android:summary="简单的键盘输入"></CheckBoxPreference><EditTextPreference android:key="moveflexibility" android:title="移动灵敏度" android:summary="1~10"></EditTextPreference><CheckBoxPreference android:summary="鼠标滚轮" android:title="滚动" android:key="apply_scroll"></CheckBoxPreference>
+        <EditTextPreference android:key="scrollflexibility" android:title="滚动灵敏度" android:dependency="apply_scroll" android:summary="1~10" android:inputType="number"></EditTextPreference>
+        <CheckBoxPreference android:title="快速滑动" android:key="apply_fling" android:summary="包括上下左右的滑动"></CheckBoxPreference>
+        <EditTextPreference android:key="flingflexibility" android:title="快速滑动灵敏度" android:dependency="apply_fling" android:summary="10~100" android:inputType="number"></EditTextPreference><CheckBoxPreference android:key="apply_shake" android:title="抖动" android:summary="手机抖动关闭当前应用程序"></CheckBoxPreference>
+        
+        <EditTextPreference android:key="shakeflexibility" android:title="颤动灵敏度" android:dependency="apply_shake" android:summary="800左右"></EditTextPreference>
+        
+        
+        
+    </PreferenceCategory>
+    <PreferenceCategory android:key="internet_settings" android:title="网络设定">
+        <EditTextPreference android:title="配置服务器IP地址" android:key="server_ip" android:summary="默认127.0.0.1"></EditTextPreference>
+    </PreferenceCategory>
+    <Preference android:key="close" android:title="返回"></Preference>
+</PreferenceScreen>
